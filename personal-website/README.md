@@ -1,0 +1,7 @@
+# Environment Variables
+
+ - DATABASE_IP
+ - DATABASE_PORT
+ - PSQL_PASS
+ - LOCAL_PORT
+ - PSQL_PORT

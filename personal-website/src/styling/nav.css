@@ -1,0 +1,22 @@
+  .toggle-links a{
+     /* common styles for links element  */
+     text-decoration: none;
+     color: white; /* Set the text color to white */
+     /* display: block; */
+     font-size: 2vw; /* font size of the viewport width */
+     line-height: 2vw; /* Center the text vertically within the link, larger value will spread the links out */
+     text-align: center; /* Center the text horizontally within the link */
+  }  
+
+  .visible{
+     /* If visible is added to togglelinks classname, it is visible  */
+    visibility : visible;
+  }
+
+  .hidden{
+    /* If hidden is added to togglelinks classname, it is hidden */
+    visibility : hidden;
+  }
+
+
+  

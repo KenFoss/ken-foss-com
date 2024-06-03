@@ -1,0 +1,6 @@
+// Override Bootstrap variables before importing Bootstrap
+$table-bg: transparent;
+$table-color: white;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+

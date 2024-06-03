@@ -1,0 +1,8 @@
+body {
+    /* margin: 0;
+    margin-left: 10px;
+    padding: 0; */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/site-background.jpg') center/cover no-repeat; /* Set the background image *
+    color: white; 
+    /* font-family: Arial, sans-serif; */
+}

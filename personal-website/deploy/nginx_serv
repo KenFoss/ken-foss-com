@@ -1,0 +1,17 @@
+server {
+    listen 80;
+    server_name kenfoss.com www.kenfoss.com;
+
+    # Serve static files directly from the build directory
+    #location / {
+    #    root ~/personal-website/personal-website/build;
+    #    try_files $uri $uri/ /index.html;
+    #}
+
+    # Proxy requests to Express server
+    location / {
+        proxy_pass http://127.0.0.1:8850;  # Assuming Express server is running on port 3000
+    }
+
+    # Additional server configurations...
+}
