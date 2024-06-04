@@ -1,9 +1,9 @@
 
 
 .my-headshot {
-    width: 20vw; 
+    width: 17.2vw; 
     /* max-width: 300px; Set a maximum width if desired */
-    height: 20vw;
+    height: 17.2vw;
     border-radius: 50%; 
     border: 2px solid #808080; /* Gray border with 2px width */
     overflow: hidden; /* Hide overflow */
@@ -16,22 +16,37 @@
 }
 
 .medium-link {
-    width: 10vw; 
+    width: 8.6vw; 
     /* max-width: 300px; Set a maximum width if desired */
-    height: 10vw;
+    height: 8.6vw;
     padding: 1vw;
     border-radius: 50%; 
-    border: 2px solid #808080; /* Gray border with 2px width */
-    
+    border: 2px solid #808080; /* Gray border with 2px width */ 
 }  
 
+@media (min-width: 1024px) {
+  .row-1-icon-2 {
+    margin-top: 5vh;
+  }
+}
+
+@media(max-width: 930px) {
+  .row-1-icon-2 {
+    margin-top:5px;
+  }
+}
+
 .small-link {
-    width: 7vw; 
+    display: flex;
+    flex-direction: row;
+    width: 5.6vw; 
     /* max-width: 300px; Set a maximum width if desired */
-    height: 7vw;
+    height: 5.6vw;
     padding: 1vw;
     border-radius: 50%; 
     border: 2px solid #808080; /* Gray border with 2px width */
+    justify-content: center;
+    overflow: hidden; /* Hide overflow */
 }  
 
 .GitLab-Icon{
@@ -55,30 +70,53 @@
     color: #0077B5;
 }
 
-
-.Text-Row-One text{
-    margin-top: 15vh;
-    font-size: 5vw;
-    font-family: 'Playfair Display', serif;
-    color: white;
+.github-icon{
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  color: #ffffff;
 }
 
-.Text-Row-Two text{
-    margin-top:10%;
+.medium-icon{
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+  color: #000000;
+}
+
+.row-2-icon-1{
+  display: flex;
+  background-color: #808080; /* Gray border with 2px width */ 
+  justify-content: center;
+  align-items: center;
+}  
+
+/* .text-row-one {
+  margin-top: 40vh;
+} */
+
+.text-row-one text{
+  font-size: 5vw;
+  font-family: 'Playfair Display', serif;
+  color:white;
+}
+
+.text-row-two text{
+    margin-top:5%;
     font-size: 2.3vw;
     font-family: 'Playfair Display', serif;
     color: white;
 }
 
-.Text-Row-Three text{
-    margin-top:10%;
+.text-row-three text{
+    margin-top:5%;
     font-size: 1.6vw;
     font-family: 'Playfair Display', serif;
     color: white;
 }
 
-.Text-Row-Four text{
-    margin-top:10%;
+.text-row-four text{
+    margin-top:5%;
     font-size: 1.6vw;
     font-family: 'Playfair Display', serif;
     color: white;

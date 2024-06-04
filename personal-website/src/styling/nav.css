@@ -1,22 +1,49 @@
-  .toggle-links a{
-     /* common styles for links element  */
-     text-decoration: none;
-     color: white; /* Set the text color to white */
-     /* display: block; */
-     font-size: 2vw; /* font size of the viewport width */
-     line-height: 2vw; /* Center the text vertically within the link, larger value will spread the links out */
-     text-align: center; /* Center the text horizontally within the link */
-  }  
 
-  .visible{
-     /* If visible is added to togglelinks classname, it is visible  */
-    visibility : visible;
-  }
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 1vh;
+}
+.nav-bar a, FontAwesomeIcon {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right:5vw;
+  position: relative; 
+}
 
-  .hidden{
-    /* If hidden is added to togglelinks classname, it is hidden */
-    visibility : hidden;
-  }
+  /* .nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 10px;
+    position: relative; /* Ensure relative positioning for absolute positioning of the pulsating effect */
 
 
-  
+.nav-bar a:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-60%, -200%); */
+    border-radius: 120%;
+    box-shadow: 0 0 0 0 rgba(255, 248, 248, 0.7); /* Initial shadow style */
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    opacity: 1; /* Show the pulsating effect on hover */
+    animation: pulse 1.2s infinite alternate; /* Use the 'pulse' animation on hover */
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0 rgb(245, 242, 242); /* Start with a dim shadow */
+    }
+    to {
+        box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0); /* Expand and fade the shadow on alternate */
+    }
+}
