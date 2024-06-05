@@ -30,8 +30,8 @@ const Pubs = () => {
 
   return (
     <Container fluid>
-      <Row style={{ height: '15vh', marginLeft: '0.2vw' }}>
-        <Col xs={1} sm={1} md={1} lg={12}>
+      <Row >
+        <Col >
           <Nav className='nav' />
         </Col>
       </Row>

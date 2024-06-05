@@ -34,13 +34,13 @@ function Home() {
 
     return (
         <Container fluid>
-            <Row style={{ height: '15vh', marginLeft: '0.2vw' }}>
+            <Row className='home-header'>
               <Col xs={{ offset: 0, span: 1 }} sm={{ offset: 0, span: 1 }} md={{ offset: 0, span: 1 }} lg={{ offset: 0, span: 1 }}>
               <Nav className='nav' />
               </Col>
             </Row>
             <Row>
-                <Col xs={{ offset: 0, span: 6 }} sm={{ offset: 0, span: 6 }} md={{ offset: 0, span: 7 }} lg={{ offset: 0, span: 6 }}>
+                <Col xs={{ offset: 0, span: 11 }} sm={{ offset: 0, span: 11 }} md={{ offset: 0, span: 6 }} lg={{ offset: 0, span: 6 }}>
                   {/* First Column Content */}
                   <Row>
                       <Col xs={{ offset: 3, span: 5 }} sm={{ offset: 3, span: 5 }} md={{ offset: 4, span: 5 }} lg={{ offset: 4, span: 8}}>
@@ -48,31 +48,44 @@ function Home() {
                               <img src={headshot} alt="Ken Foss" />
                           </div>
                       </Col>
+                      <Col className="header-col">
+                        <Row className='header-phone-1' >
+                            <text>
+                                I'm Ken Foss
+                            </text>
+                        </Row>
+                        <Row className='header-phone-2'>
+                            <text>
+                                Software Engineer <a href="https://www.budderfly.com/">@Budderfly</a>
+                            </text>
+                        </Row>
+                      </Col>
+                      
                   </Row>
                   <Row>
-                      <Col xs={{ offset: 1, span: 2 }} sm={{ offset: 1, span: 3 }} md={{ offset: 3, span: 3 }} lg={{ offset: 1, span: 3}}>
+                      <Col xs={{ offset: 1, span: 2 }} sm={{ offset: 1, span: 2 }} md={{ offset: 2, span: 2 }} lg={{ offset: 1, span: 3}}>
                           <div className='small-link' >
                               <SiIeee className="Ieee-Icon" onClick={() => handleClick(2)} />
                           </div>
                       </Col>
-                      <Col xs={{ offset: 1, span: 2 }} sm={{ offset: 2, span: 3 }} md={{ offset: 2, span: 3 }} lg={{ offset: 1, span: 2 }}>
-                          <div className='medium-link row-1-icon-2'>
+                      <Col xs={{ offset: 3, span: 1 }} sm={{ offset: 3, span: 1 }} md={{ offset: 1, span: 3 }} lg={{ offset: 1, span: 2 }}>
+                          <div className='medium-link icon-row-1-icon-2'>
                               <FaGitlab className="GitLab-Icon" onClick={() => handleClick(0)} />
                           </div>
                       </Col>
-                      <Col  xs={{ offset: 1, span: 3 }} sm={{ offset: 1, span: 3 }} md={{ offset: 3, span: 3 }} lg={{ offset: 2, span: 3}}>
-                          <div className='small-link  row-1-icon-2' >
+                      <Col  xs={{ offset: 2, span: 3 }} sm={{ offset: 2, span: 3 }} md={{ offset: 0, span: 2 }} lg={{ offset: 2, span: 3}}>
+                          <div className='small-link  icon-row-1-icon-2' >
                               <FontAwesomeIcon className="github-icon" icon={faGithub} onClick={() => handleClick(3)}/>
                           </div>
                       </Col>
                   </Row>
                   <Row>
-                      <Col  xs={{ offset: 2, span: 3 }} sm={{ offset: 2, span: 3 }} md={{ offset: 2, span: 3 }} lg={{ offset: 2, span: 2 }}>
-                          <div className='medium-link row-2-icon-1'>
+                      <Col  xs={{ offset: 3, span: 3 }} sm={{ offset: 3, span: 3 }} md={{ offset: 3, span: 2 }} lg={{ offset: 2, span: 2 }}>
+                          <div className='medium-link icon-row-2-icon-1'>
                             <FontAwesomeIcon className="medium-icon" icon={faMedium} onClick={() => handleClick(4)}/>
                           </div>
                       </Col>
-                      <Col xs={{ offset: 5, span: 3 }} sm={{ offset: 5, span: 3 }} md={{ offset: 5, span: 3 }} lg={{ offset: 4, span: 3 }}>
+                      <Col xs={{ offset: 2, span: 1 }} sm={{ offset: 2, span: 1 }} md={{ offset: 2, span: 3 }} lg={{ offset: 4, span: 3 }}>
                           <div className='small-link'>
                               <FaLinkedin className="LinkedIn-Icon" onClick={() => handleClick(1)} />
                           </div>
@@ -80,7 +93,7 @@ function Home() {
                   </Row>
                 </Col>
 
-                <Col xs={{ offset: 0, span: 5 }} sm={{ offset: 0, span: 5 }} md={{ offset: 0, span: 5 }} lg={{ offset: 0, span: 6 }}>
+                <Col xs={{ offset: 1, span: 10 }} sm={{ offset: 1, span: 10 }} md={{ offset: 0, span: 5 }} lg={{ offset: 0, span: 6 }}>
                     {/* Second Column Content */}
                     <Row className='text-row-one' >
                         <text>
@@ -89,7 +102,7 @@ function Home() {
                     </Row>
                     <Row className='text-row-two'>
                         <text>
-                            Software Engineer @Budderfly
+                            Software Engineer <a href="https://www.budderfly.com/">@Budderfly</a>
                         </text>
                     </Row>
                     <Row className='text-row-three'>
@@ -103,7 +116,7 @@ function Home() {
                         <text>
                         These days, my primary focus is on web development. At Budderfly, I'm involved in a microservices architecture, 
                         utilizing an Angular front-end and a Java Spring Boot back-end. Additionally, I've delved into writing, 
-                        concentrating on React.js and Java, covering various aspects of web development. My content is targetting a late-stage beginner
+                        concentrating on React.js and Java, covering various aspects of web development. My content is targeting a late-stage beginner
                         to intermediate audience. Feel free to check out my Medium profile for more!       
                         </text>
                     </Row>

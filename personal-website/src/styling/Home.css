@@ -24,24 +24,97 @@
     border: 2px solid #808080; /* Gray border with 2px width */ 
 }  
 
-@media (min-width: 1024px) {
-  .row-1-icon-2 {
+
+@media (min-width: 737px) {
+  .icon-row-1-icon-2 {
     margin-top: 5vh;
+  }
+  .small-link {
+    width: 5.6vw; 
+    /* max-width: 300px; Set a maximum width if desired */
+    height: 5.6vw;
+  }
+  .medium-link {
+    width: 8.6vw; 
+    /* max-width: 300px; Set a maximum width if desired */
+    height: 8.6vw;
+  }
+
+  .text-row-three text{
+    margin-top:5%;
+    font-size: 1.6vw;
+  }
+  .text-row-four text{
+    font-size: 1.4vw;
+  }
+  .header-col { 
+    visibility: hidden;
+    position:absolute;
   }
 }
 
-@media(max-width: 930px) {
-  .row-1-icon-2 {
+@media(max-width: 737px) {
+  .icon-row-1-icon-2 {
     margin-top:5px;
   }
+  .my-headshot {
+    margin-top:2vh;
+    width: 25vw; 
+    /* max-width: 300px; Set a maximum width if desired */
+    height: 25vw;
+  } 
+  .small-link {
+    width: 10vw; 
+    /* max-width: 300px; Set a maximum width if desired */
+    height: 10vw;
+  }
+  .medium-link {
+    width: 15vw; 
+    /* max-width: 300px; Set a maximum width if desired */
+    height: 15vw;
+  }
+  .text-row-one{
+    visibility:hidden;
+    position:absolute;
+  }
+  .text-row-two{
+    visibility: hidden;
+    position:absolute
+  }
+  .text-row-three text{
+    margin-top: 5vh;
+    font-size: 3vw;
+  }
+
+  .text-row-four text{
+    font-size: 3vw;
+  }
+}
+
+.header-phone-1 text{
+  margin-top: 4vh;
+  font-size: 4vw;
+  font-family: 'Playfair Display', serif;
+  color:white;
+  text-align: center;
+}
+
+.header-phone-2 text{
+    margin-top:2vh;
+    font-size: 2.3vw;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    text-align: center;
+}
+.header-phone-2 a {
+  font-weight:bold;
+  text-decoration: none;
+  color: rgb(43, 123, 43);
 }
 
 .small-link {
     display: flex;
     flex-direction: row;
-    width: 5.6vw; 
-    /* max-width: 300px; Set a maximum width if desired */
-    height: 5.6vw;
     padding: 1vw;
     border-radius: 50%; 
     border: 2px solid #808080; /* Gray border with 2px width */
@@ -84,7 +157,7 @@
   color: #000000;
 }
 
-.row-2-icon-1{
+.icon-row-2-icon-1{
   display: flex;
   background-color: #808080; /* Gray border with 2px width */ 
   justify-content: center;
@@ -99,6 +172,12 @@
   font-size: 5vw;
   font-family: 'Playfair Display', serif;
   color:white;
+  text-align: center;
+}
+.text-row-two a {
+  font-weight:bold;
+  text-decoration: none;
+  color: rgb(43, 123, 43);
 }
 
 .text-row-two text{
@@ -106,20 +185,20 @@
     font-size: 2.3vw;
     font-family: 'Playfair Display', serif;
     color: white;
+    text-align: center;
 }
 
 .text-row-three text{
-    margin-top:5%;
-    font-size: 1.6vw;
     font-family: 'Playfair Display', serif;
     color: white;
+    text-align: center;
 }
 
 .text-row-four text{
     margin-top:5%;
-    font-size: 1.6vw;
     font-family: 'Playfair Display', serif;
     color: white;
+    text-align: center;
 }
 
 

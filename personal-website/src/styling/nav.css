@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  margin-top: 1vh;
 }
 .nav-bar a, FontAwesomeIcon {
   text-decoration: none;
@@ -15,14 +14,18 @@
   position: relative; 
 }
 
-  /* .nav-bar a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    padding: 10px;
-    position: relative; /* Ensure relative positioning for absolute positioning of the pulsating effect */
+@media (min-width: 737px) {
+  .nav-bar {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+}
+@media (max-width: 737px) {
+  .nav-bar {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+  }
+}
 
 
 .nav-bar a:hover::after {
