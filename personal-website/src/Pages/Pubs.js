@@ -13,16 +13,36 @@ const Pubs = () => {
   useEffect(() => {
 
     setPubGroups([
-      [{ 
-        "pubLink": "https://medium.com/devops-dev/dive-into-csrf-defense-real-attack-demonstrations-safeguards-with-spring-security-69c22b25c322",
-        "pubName": "CSRF Forgery Defense with Spring Security",
-        "pubImgLink": "https://ken-foss-com-site-resources.s3.amazonaws.com/csrf-forgery.jpg"
-      },
-      { 
-        "pubLink": "https://medium.com/devops-dev/local-web-development-setup-with-docker-c666905223c3",
-        "pubName": "Local Web Development Setup with Docker",
-        "pubImgLink": "https://ken-foss-com-site-resources.s3.amazonaws.com/docker-test-setup.jpg"
-      }]
+        {
+          "pubLink": "https://medium.com/devops-dev/dive-into-csrf-defense-real-attack-demonstrations-safeguards-with-spring-security-69c22b25c322",
+          "pubName": "CSRF Forgery Defense with Spring Security",
+          "pubImgLink": "https://ken-foss-com-site-resources.s3.amazonaws.com/csrf-forgery.jpg"
+        },
+        {
+          "pubLink": "https://medium.com/devops-dev/local-web-development-setup-with-docker-c666905223c3",
+          "pubName": "Local Web Development Setup with Docker",
+          "pubImgLink": "https://ken-foss-com-site-resources.s3.amazonaws.com/docker-test-setup.jpg"
+        },
+        {
+          "pubLink": "https://medium.com/javarevisited/lets-get-authenticated-google-sign-in-d4f4d7606ba3",
+          "pubName": "Let's Get Authenticated - Google Sign In",
+          "pubImgLink": "https://ken-foss-com-site-resources.s3.us-east-1.amazonaws.com/google-oauth-article.jpg"
+        },
+        {
+            "pubLink": "https://medium.com/gitconnected/stop-committing-your-images-to-git-4f5148416c55",
+            "pubName": "Stop Committing Your Images to Git!",
+            "pubImgLink": "https://ken-foss-com-site-resources.s3.us-east-1.amazonaws.com/stop-committing-img-to-git-article.jpg"
+        },
+        {
+            "pubLink": "https://medium.com/gitconnected/docker-compose-setup-for-a-microservices-architecture-f47902dadcae",
+            "pubName": "Docker Compose Setup for a MicroServices Architecture",
+            "pubImgLink": "https://ken-foss-com-site-resources.s3.us-east-1.amazonaws.com/docker-compose-setup-microservices.jpg"
+        },
+        {
+            "pubLink": "https://medium.com/gitconnected/keeping-your-microservices-in-sync-with-apache-kafka-and-friends-82c502575828",
+            "pubName": "Keeping Your Microservices in Sync with Apache Kafka and Friends",
+            "pubImgLink": "https://ken-foss-com-site-resources.s3.us-east-1.amazonaws.com/keeping-microservices-in-sync-article.jpg"
+        }
     ])
 
   }, []);
@@ -36,20 +56,13 @@ const Pubs = () => {
         </Col>
       </Row>
 
-      {pubGroups.map((pubGroup, index) => (
-        <Row key={`row-${index}`}>
-          {pubGroup.map((pub, innerIndex) => (
-            <Col key={`col-${innerIndex}`} 
-            xs={{offset:innerIndex == 0? 1 : 0, span:5}} 
-            sm={{offset:innerIndex == 0? 1 : 0, span:5}}  
-            md={{offset:innerIndex == 0? 1 : 0, span:5}} 
-            lg={{offset:innerIndex == 0? 2 : 0, span:4}}
-            xl={{offset:innerIndex == 0? 2 : 0, span:4}}>
-              <Publication pubLink={pub.pubLink} pubName={pub.pubName} pubImgLink={pub.pubImgLink} />
-            </Col>
-          ))}
-        </Row>
-      ))}
+        <div className={"pubDisplay"}>
+            {pubGroups.map((pub, index) => (
+
+                <Publication key={index} pubLink={pub.pubLink} pubName={pub.pubName} pubImgLink={pub.pubImgLink} />
+
+            ))}
+        </div>
 
     </Container>
   );
