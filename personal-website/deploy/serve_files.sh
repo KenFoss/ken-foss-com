@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cp -r ../build/* /var/www/kenfoss
-cp -r ../build/* /var/www/<IP>
+cp -r ../dist/* /var/www/kenfoss
+cp -r ../dist/* /var/www/<IP>
 
 sudo nginx -t
 sudo systemctl restart nginx

@@ -1,39 +1,24 @@
-const express = require('express');
-const path = require('path');
-const get_requests = require('./src/api/get.js');
-const post_requests = require('./src/api/post.js');
-const dotenv = require('dotenv').config();
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
-// dotenv.config({path: './.env'});
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
+const dist = path.join(__dirname, 'dist');
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(dist));
 
-app.get('/Home', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(dist, 'index.html'));
 });
 
-app.get('/Music', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-const port = process.env.REACT_APP_LOCAL_PORT || 8850;
+const port = Number(process.env.REACT_APP_LOCAL_PORT || process.env.PORT || 8850);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
-// console.log(process.env)
-
-// app.get('/api/users', get_requests.getUsers)
-// app.post('/api/createPassingStats', post_requests.createPassingStats)
-// // This will log the audio file that has been uploaded to the database
-// // it takes 5 query parameters, isPodcast(boolean), isSong(boolean),
-// // isDaily(boolean), newName(string) and location(string)
-// app.post('/api/storeAudioFile', post_requests.addAudioFile)
-// // This will delete the audio file of the associated audio_id that will 
-// // be passed as a query parameter
-// app.post('/api/deleteAudio', post_requests.removeAudioFile)
-// app.get('/api/getAudio', get_requests.getAudioFiles)
-// app.get('/api/getAudioLength', get_requests.getAudioLength)
